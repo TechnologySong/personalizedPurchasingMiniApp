@@ -1,0 +1,33 @@
+.input{
+  ::before{
+    position: relative;
+
+    content: '昵称：';
+  }
+  position: relative;
+  left: 20px;
+}
+
+
+.registerWrapper{
+  position: relative;
+  top: 300px;
+  left: 150px;
+  width: 500px;
+  height: 650px;
+
+}
+.title{
+  position: relative;
+  top: 250px;
+  left: 300px;
+  font-size: 200%;
+
+}
+
+.button{
+  width: 200px;
+  background-color: #66B3FF;
+  color: white;
+
+}

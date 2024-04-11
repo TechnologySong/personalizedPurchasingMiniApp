@@ -1,0 +1,50 @@
+
+$color-brand-light:#78A4F4FF;
+.gm-switch {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  display: inline-block;
+  width: 104px;
+  height: 64px;
+
+  outline: 0;
+  border-radius: 32px;
+  box-sizing: border-box;
+  background-color: #dfdfdf;
+  transition: background-color 0.1s, border 0.1s;
+}
+
+.gm-switch:after,
+.gm-switch:before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 60px;
+
+  background-color: #fdfdfd;
+  transition: transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+}
+
+.gm-switch:after {
+  width: 60px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
+}
+
+.gm-switch.checked {
+  border-color: $color-brand-light;
+  background-color: $color-brand-light;
+}
+
+.gm-switch.checked:before {
+  transform: scale(0);
+}
+
+.gm-switch.checked:after {
+  transform: translateX(40px);
+}
+

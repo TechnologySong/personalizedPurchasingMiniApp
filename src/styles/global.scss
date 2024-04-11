@@ -1,0 +1,175 @@
+@import './custom-theme.scss';
+@import './mixin.scss';
+@import './icon.scss';
+@import "~taro-ui/dist/style/index.scss";
+
+/********** 直接修改部分外部组件的样式 start **********/
+.at-tab-bar--fixed {
+  padding-bottom: 6px;
+}
+
+.at-search-bar {
+  height: 80px;
+}
+
+.at-countdown {
+  color: #333;
+  .at-countdown__time-box {
+    // padding: 3px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: auto;
+  }
+}
+
+.at-float-layout .layout-body {
+  padding: 0;
+}
+
+.at-list__item {
+  padding: 24px 30px;
+}
+
+.at-button.danger {
+  @include border($color: #ff4d4f);
+  background: #ff4d4f;
+}
+
+.EPage {
+  background: #ebedf0;
+}
+/********** 直接修改部分外部组件的样式 end **********/
+
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+text.required {
+  &::after {
+    content: '*';
+    margin-right: 5px;
+    color: #e4393c;
+    vertical-align: middle;
+  }
+}
+
+.at-input.required {
+  .at-input__title {
+    &::before {
+      content: '*';
+      margin-right: 5px;
+      color: #e4393c;
+      vertical-align: middle;
+    }
+  }
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.border-bottom {
+  /* prettier-ignore */
+  border-bottom: 1PX solid #eee;
+}
+
+.fixed-bottom-btn {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0;
+  z-index: 800;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  box-sizing: content-box !important;
+  width: 100%;
+}
+
+// 面板样式，用法见订阅设置页
+.panel {
+  margin: 32px 0 56px;
+
+  &__title {
+    position: relative;
+    margin-bottom: 32px;
+    padding-left: 50px;
+    color: #6a6a77;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.5;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: 24px;
+      top: 50%;
+      margin-top: -20px;
+      width: 6px;
+      height: 40px;
+      background-color: $color-brand-light;
+      box-shadow: 0 7px 12px 0 rgba(97, 144, 232, 0.2);
+      border-radius: 1px;
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    padding: 20px 40px;
+    color: #6a6a77;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.5;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: 24px;
+      top: 40px;
+      margin-top: -15px;
+      width: 4px;
+      height: 28px;
+      background-color: #6a6a77;
+      box-shadow: 0 7px 12px 0 rgba(97, 144, 232, 0.2);
+      border-radius: 1px;
+    }
+  }
+
+  &__content {
+    .at-input,
+    .at-switch {
+      margin-left: 24px;
+    }
+    .at-switch__title {
+      font-size: 32px;
+    }
+    // .at-input input {
+    //   text-align: right;
+    // }
+    .at-list__item-extra {
+      width: 400px;
+      max-width: 400px;
+    }
+    .at-checkbox__title {
+      flex: 1;
+      display: block;
+      // text-align: right;
+    }
+  }
+}

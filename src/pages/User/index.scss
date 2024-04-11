@@ -1,0 +1,78 @@
+
+.user-wrap {
+  padding-bottom: 120px;
+
+  .list_button {
+    background: #fff;
+    text-align: left;
+    border-radius: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      transform-origin: center;
+      pointer-events: none;
+      top: auto;
+      left: 24px;
+      right: 0;
+      bottom: 0;
+      width: auto;
+      height: auto;
+      border: none;
+      transform: scaleY(0.5);
+      /* prettier-ignore */
+      border-bottom: 1PX solid #d6e4ef;
+    }
+  }
+}
+
+.avatar-wrap {
+  position: relative;
+
+  .avatar {
+    padding: 10px 30px;
+  }
+
+  .user-info {
+    padding-top: 15px;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .icon-crown {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 36px;
+    color: #999;
+
+    &.isvip {
+      color: #fdcf00;
+    }
+  }
+
+  .vip {
+    font-size: 28px;
+  }
+
+  .vip-sub {
+    font-size: 24px;
+    color: #999;
+  }
+
+  .buy-btn {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 24px;
+    color: #fff;
+    background: #ff7e2a;
+  }
+
+  .login-btn {
+    float: right;
+    margin: -6px 20px 0 0;
+  }
+}

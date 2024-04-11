@@ -1,0 +1,30 @@
+@import '../../styles/mixin.scss';
+
+.money-range {
+  .range-header {
+    display: flex;
+    padding: 0 30px;
+    height: 80px;
+    line-height: 80px;
+    @include border-bottom(#f2f2f2);
+  }
+  .cancel,
+  .confirm {
+    flex: 1;
+    font-size: 34px;
+    text-align: left;
+    color: #888;
+  }
+  .confirm {
+    text-align: right;
+    color: #1aad19;
+  }
+  .money-content {
+    padding: 50px 75px;
+  }
+  .money-text {
+    padding: 50px 0 100px;
+    text-align: center;
+    font-size: 32px;
+  }
+}
